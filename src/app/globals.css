@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --brand-primary: #0C2340;
+  --brand-accent: #0052B4;
+  --brand-bg: #F8FAFC;
+  --border-color: #E2E8F0;
+  --text-main: #020617;
+  --text-muted: #475569;
+}
+
+/* Кастомный фокус */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--brand-accent) !important;
+  box-shadow: 0 0 0 1px var(--brand-accent);
+}
+
+/* Скрытие скроллбара */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
